@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- === REMIXON ICON FILE === -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+            rel="stylesheet"
+        />
+        <!-- === CSS FILE === -->
+        <link rel="stylesheet" href="./assets/src/index.css" />
+        <!-- === JS FILE === -->
+        <script src="./assets/src/index.js" defer></script>
+        <title>Weather App</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="searchContainer">
+                <input type="text" class="searchInput" id="searchInput"/>
+                <span>
+                    <i class="ri-search-line searchIcon" id="searchIcon"></i>
+                </span>
+            </div>
+            <div class="weatherInfoContainer">
+                <div class="weatherInfo1">
+                    <div class="weather">
+                        <img
+                            src="./assets/images/clear.png"
+                            alt="weather icon"
+                            id="weatherImg"
+                        />
+                    </div>
+                    <div class="weatherNumber">
+                        <h3 id="temperature"></h3>
+                        <h1 id="cityName"></h1>
+                    </div>
+                </div>
+                <div class="weatherInfo2">
+                    <div class="humidityContainer">
+                        <img
+                            src="./assets/images/humidity.png"
+                            alt="humidity icon"
+                        />
+                        <p id="humidity"><span></span><br />Humidity</p>
+                    </div>
+                    <div class="windSpeedContainer">
+                        <img src="./assets/images/wind.png" alt="" />
+                        <p id="windSpeed">
+                            <span></span><br />
+                            Wind Speed
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="error" id="error"></div>
+    </body>
+</html>

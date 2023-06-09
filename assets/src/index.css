@@ -1,0 +1,161 @@
+/* === GOOGLE FONTS === */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;600;700&display=swap');
+
+/* === GENERALE PARAMETERS === */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: #fff;
+    background-color: #333;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    /* height: 500px; */
+    height: 50px;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: height .3s,
+    width .3s;
+    overflow: hidden;
+}
+
+img {
+    width: 23px;
+    height: 23px;
+}
+
+/* === CSS VARIABLES === */
+:root {
+    /* Sizes */
+    --big-size: 54.93px;
+    --medium-size: 43.95px;
+    --small-size: 16px;
+}
+
+/* === START STYLING THE WEATHER APP === */
+.searchContainer {
+    /* border: 1px solid; */
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.searchInput {
+    height: 30px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transition: width 0.3s;
+    font-family: 'Instrument Sans', sans-serif;
+}
+
+.searchInput:focus {
+    width: 200px;
+}
+
+.searchContainer span {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transform: rotate(-360deg);
+    transition: transform .5s;
+    cursor: pointer;
+}
+
+.searchIcon {
+    color: #333;
+}
+
+.weatherInfoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.weatherInfo1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherInfo1 h1,
+.weatherInfo1 h3 {
+    text-align: center;
+}
+
+.weatherInfo1 h1 {
+    font-size: var(--medium-size);
+}
+
+.weatherInfo1 h3 {
+    font-size: var(--big-size);
+}
+
+.weather img {
+    width: 150px;
+    height: 150px;
+}
+
+.weatherInfo2 {
+    margin-top: 40px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weatherInfo2 div {
+    margin-inline: 5px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.weatherInfo2 div p {
+    margin-left: 10px;
+    font-size: var(--small-size);
+}
+
+.error{
+    width: 300px;
+    height: 90px;
+    background-color: #333;
+    color: rgb(221, 90, 90);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% + 100px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    display: none;
+}
