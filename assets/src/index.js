@@ -46,6 +46,7 @@ async function getData(url) {
                 weather: [{ main: weatherImg }],
             } = data;
 
+            console.log(weatherImg)
             cityName.innerHTML = city;
             wImg.src = `./assets/images/${weatherImg}.png`;
             temp.innerHTML = `${Math.floor(temperature)}°c`;
