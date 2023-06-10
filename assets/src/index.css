@@ -17,20 +17,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .container {
+    padding: 10px;/*changed*/
     width: 400px;
-    /* height: 500px; */
     height: 50px;
+    /* height: 50px; */
     background: linear-gradient(135deg, #00feba, #5b548a);
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; *//*changed*/
     justify-content: space-around;
-    align-items: center;
-    transition: height .3s,
-    width .3s;
+    align-items: start;/*changed*/
+    position: relative;
+    transition: all .3s;
     overflow: hidden;
 }
 
@@ -72,7 +74,7 @@ img {
     width: 200px;
 }
 
-.searchContainer span {
+.searchContainer span:nth-child(2) {
     width: 30px;
     height: 30px;
     background-color: #fff;
@@ -87,6 +89,14 @@ img {
 
 .searchIcon {
     color: #333;
+}
+
+.menu{
+    cursor: pointer;
+}
+
+.menu i{
+    font-size: 25px;
 }
 
 .weatherInfoContainer {
@@ -146,16 +156,111 @@ img {
     width: 300px;
     height: 90px;
     background-color: #333;
-    color: rgb(221, 90, 90);
-    border-radius: 5px;
+    border: 1px solid;
+    color: #eb3838;
+    border-radius: 10px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: calc(50% + 100px);
+    top: 50px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     z-index: 5;
+    animation: error 1s linear 0s infinite;
     display: none;
+}
+
+@keyframes error {
+    0%, 100%{
+        box-shadow: 0 0 0;
+    }
+    50%{
+        box-shadow: 1px 1px 50px #eb3838,
+        -1px -1px 50px #eb3838;
+    }
+}
+
+.additionalInfoContainer1{
+    height: 450px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 1px solid  #00feba;
+    background: linear-gradient(-68deg, #00feba, #5b548a);
+    color: #333;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 100%;
+    z-index: 10;
+    transition: right .7s;
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close i{
+    font-size: 25px;
+}
+
+.additionalInfoContainer2{
+    height: 450px;
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #333;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    z-index: 10;
+    transition: left .7s;
+}
+
+.additonalInfo{
+    width: 100%;
+}
+
+.additonalInfo .img img{
+    width: 50px;
+    height: 50px;
+}
+
+.imgMeaning{
+    width: 100%;
+    margin-block: 20px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:767px) {
+    .additionalInfoContainer1{
+        width: 25%;
+        border: none;
+    }
+
+    .additionalInfoContainer2{
+        width: 25%;
+    }
 }
