@@ -1,5 +1,4 @@
 # Weather-APP
-Sure! Below is an example README file for the Weather App website:
 
 Welcome to the Weather App! This web application provides real-time weather information for any location worldwide. Users can simply enter the name of a city or use their device's location services to get the current weather conditions, temperature, humidity, wind speed, and a five-day forecast.
 
