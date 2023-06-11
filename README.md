@@ -79,6 +79,7 @@ For any questions or inquiries, please contact the project owner:
 - Name: Mounir
 - GitHub: https://github.com/MounirWebdev
 - Email: mounirabcire@gmail.com
+- Website: https://mounirwebdev.github.io/Front-End-Portfolio/
 
 Feel free to reach out with any feedback or suggestions.
 
